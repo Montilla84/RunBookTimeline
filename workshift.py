@@ -81,7 +81,7 @@ def create_gantt_chart(df):
     
     for _, row in df.iterrows():
         # Combinar la información de la tarea y la actividad para la descripción
-        task_description = f"{row['Milestone/task']} - {row['Activity']}"
+        task_description = f"{row['Milestone/task']} - {row['Activity']} - {row['Duration (Hours)']:.2f} horas - {row['Responsible Person']}"
         
         gantt_data.append(dict(
             Task=row['Activity Number'],
